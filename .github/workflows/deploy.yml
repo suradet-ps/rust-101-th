@@ -29,7 +29,6 @@ jobs:
 
       - name: Build Book
         run: |
-          # หาก book ของคุณไม่ได้อยู่ที่ root ของ repository คุณอาจต้องเพิ่ม cd your_book_directory
           mdbook build
 
       - name: Setup Pages
