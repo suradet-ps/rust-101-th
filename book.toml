@@ -6,3 +6,7 @@ language = "th"
 [output.html]
 site-url = "/rust-101-th/"
 git-repository-url = "https://github.com/pharmacist-sabot/rust-101-th"
+
+[output.html.playground]
+editable = true
+line-numbers = true
