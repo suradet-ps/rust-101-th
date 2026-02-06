@@ -119,6 +119,63 @@ pub fn main() {
 }
 ```
 
+เอาล่ะ ทีนี้เรามาดูโค้ดรวมทั้งหมดเพื่อให้เห็นภาพการเชื่อมโยงสิ่งที่เราได้เรียนรู้ไปทั้งหมด ก็จะได้หน้าตาโค้ดประมาณนี้
+
+```rust
+enum NumberOrNothing {
+    Number(i32),
+    Nothing,
+}
+
+use self::NumberOrNothing::{Nothing, Number};
+
+impl NumberOrNothing {
+    fn print(self) {
+        match self {
+            Nothing => println!("The number is: <nothing>"),
+            Number(n) => println!("The number is: {}", n),
+        };
+    }
+
+    fn or_default(self, default: i32) -> i32 {
+        match self {
+            Nothing => default,
+            Number(n) => n,
+        }
+    }
+}
+
+fn vec_min(v: Vec<i32>) -> NumberOrNothing {
+    fn min_i32(a: i32, b: i32) -> i32 {
+        if a < b { a } else { b }
+    }
+
+    let mut min = Nothing;
+    for e in v {
+        min = Number(match min {
+            Nothing => e,
+            Number(n) => min_i32(n, e),
+        });
+    }
+
+    min
+}
+
+fn read_vec() -> Vec<i32> {
+    vec![18, 5, 7, 2, 9, 27]
+}
+
+pub fn main() {
+    let vec = read_vec();
+    let min = vec_min(vec);
+    min.print();
+
+    println!("With default 0: {}", Number(42).or_default(0));
+    println!("With default 0: {}", Nothing.or_default(0));
+}
+
+```
+
 ### แบบฝึกหัด
 
 *   **แบบฝึกหัด 01.1** จงเขียนฟังก์ชัน `vec_sum` เพื่อคำนวณผลรวมของค่าทั้งหมดใน `Vec<i32>`
