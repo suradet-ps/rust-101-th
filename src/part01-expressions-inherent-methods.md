@@ -24,11 +24,10 @@ fn abs(i: i32) -> i32 { if i >= 0 { i } else { -i } }
 
 ```rust
 enum NumberOrNothing {
-     Number(i32),
-     Nothing
+    Number(i32),
+    Nothing
 }
 use self::NumberOrNothing::{Number,Nothing};
-
 fn number_or_default(n: NumberOrNothing, default: i32) -> i32 {
     match n {
         Nothing => default,
@@ -56,26 +55,27 @@ fn vec_min(v: Vec<i32>) -> NumberOrNothing {
  
  ```rust
 fn min_i32(a: i32, b: i32) -> i32 {
-   if a < b { a } else { b }
- }
-   let mut min = Nothing;
-   for e in v {
+        if a < b { a } else { b }
+    }
+
+    let mut min = Nothing;
+    for e in v {
 ```
  
 สังเกตว่า สิ่งที่เราทำตรงนี้คือการคำนวณค่าใหม่ให้ min ซึ่งผลลัพธ์สุดท้ายจะเป็น Number เสมอ ไม่ใช่ Nothing ในภาษา Rust โครงสร้างของโค้ดสามารถสื่อถึงความสม่ำเสมอนี้ออกมาได้ชัดเจน
 
 ```rust
 min = Number(match min {
- Nothing => e,
- Number(n) => min_i32(n, e)
- });
- }
+            Nothing => e,
+            Number(n) => min_i32(n, e)
+        });
+    }
 ```
     
 Rust มีคีย์เวิร์ด return ให้ใช้ก็จริง แต่ไม่ค่อยนิยมใช้กันเท่าไหร่ ปกติเราจะอาศัยหลักการที่ว่า ตัวฟังก์ชันทั้งก้อนถือเป็นนิพจน์หนึ่งตัว ดังนั้นเราจึงเขียนค่าที่ต้องการส่งคืนลงไปตรงๆ ได้เลย
 
 ```rust
-min // นี่คือนิพจน์สุดท้ายของฟังก์ชัน vec_min ซึ่งจะถูกคืนค่า
+   min // นี่คือนิพจน์สุดท้ายของฟังก์ชัน vec_min ซึ่งจะถูกคืนค่า
 }
 ```
 
@@ -108,10 +108,11 @@ impl NumberOrNothing {
 
 ```rust
 fn read_vec() -> Vec<i32> {
-    vec![18,5,7,2,9,27]
+    vec![18, 5, 7, 2, 9, 27]
 }
 
-pub fn main() { // `pub` หมายถึง `public` ซึ่งทำให้ฟังก์ชันนี้สามารถเข้าถึงได้จากภายนอกโมดูล หรือในกรณีของ `main` คือจุดเริ่มต้นการทำงานของโปรแกรม
+pub fn main() {
+    // `pub` หมายถึง `public` ซึ่งทำให้ฟังก์ชันนี้สามารถเข้าถึงได้จากภายนอกโมดูล หรือในกรณีของ `main` คือจุดเริ่มต้นการทำงานของโปรแกรม
     let vec = read_vec();
     let min = vec_min(vec);
     min.print(); // เรียกเมธอด print() ของ NumberOrNothing โดยตรง
