@@ -27,7 +27,7 @@ type NumberOrNothing = SomethingOrNothing<i32>;
 
 อย่างไรก็ตาม เรายังสามารถเขียน `SomethingOrNothing<bool>` หรือแม้กระทั่ง `SomethingOrNothing<SomethingOrNothing<i32>>` ก็ได้ อันที่จริง type อย่าง `SomethingOrNothing` นั้นมีประโยชน์มากจนมีให้ใช้อยู่แล้วในไลบรารีมาตรฐาน เรียกว่า *ชนิดข้อมูล Option* (Option type) เขียนแทนด้วย `Option<T>` ลองเข้าไปดู[เอกสาร](https://doc.rust-lang.org/stable/std/option/index.html))ของมันได้เลย (และไม่ต้องกังวล ในนั้นมีเนื้อหาอีกเยอะที่เรายังเรียนไปไม่ถึง)
 
-### Generic impl, ฟังก์ชัน Static
+### Generic impl, Static functions
 
 type เหล่านี้คล้ายคลึงกันมาก จนเราสามารถสร้างฟังก์ชัน Generic เพื่อแปลง `SomethingOrNothing<T>` จาก `Option<T>` และแปลงกลับได้
 
