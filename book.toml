@@ -1,6 +1,6 @@
 [book]
 title = "rust-101-th"
-authors = []
+authors = ["Suradet Pratomsak"]
 language = "th"
 
 [output.html]
