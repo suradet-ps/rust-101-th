@@ -2,10 +2,13 @@
 title = "rust-101-th"
 authors = ["Suradet Pratomsak"]
 language = "th"
+description = "Rust-101 คู่มือสอนภาษา Rust ฉบับภาษาไทย เรียนรู้ตั้งแต่พื้นฐานจนถึงขั้นสูง แบบลงมือทำจริง"
 
 [output.html]
 site-url = "/rust-101-th/"
 git-repository-url = "https://github.com/pharmacist-sabot/rust-101-th"
+default-theme = "rust"
+preferred-dark-theme = "coal"
 
 [output.html.playground]
 editable = true

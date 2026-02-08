@@ -137,5 +137,5 @@ fn test_vec_min() {
 ## Exercises
 
 > **Exercise 07.1**: Add some more testcases. In particular, make sure you test the behavior of `vec_min` on an empty vector. Also add tests for `BigInt::from_vec` (in particular, removing trailing zeros). Finally, break one of your functions in a subtle way and watch the test fail.
-
+>
 > **Exercise 07.2**: Go back to your good ol' `SomethingOrNothing`, and implement `Display` for it. (This will, of course, need a `Display` bound on `T`.) Then you should be able to use them with `println!` just like you do with numbers, and get rid of the inherent functions to print `SomethingOrNothing<i32>` and `SomethingOrNothing<f32>`.

@@ -1,0 +1,13 @@
+{
+  "default": true,
+  "MD013": false,
+  "MD025": false,
+  "MD033": {
+    "allowed_elements": ["details", "summary", "br", "kbd", "sup", "sub", "u", "mark", "nothing", "T", "t"]
+  },
+  "MD041": false,
+  "MD024": {
+    "siblings_only": true
+  },
+  "MD060": false
+}

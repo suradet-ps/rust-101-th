@@ -8,7 +8,7 @@
 
 ## Generic Datatypes
 
-ทางออกของปัญหานี้เรียกว่า *Generics* หรือ *Polymorphism* (คำหลังเป็นภาษากรีก แปลว่า "หลายรูปทรง") คุณอาจเคยเห็นอะไรคล้ายๆ กันนี้มาแล้วใน C++ (ที่เรียกว่า *Template*) หรือใน Java รวมถึงภาษาตระกูล Functional languages อื่นๆ 
+ทางออกของปัญหานี้เรียกว่า *Generics* หรือ *Polymorphism* (คำหลังเป็นภาษากรีก แปลว่า "หลายรูปทรง") คุณอาจเคยเห็นอะไรคล้ายๆ กันนี้มาแล้วใน C++ (ที่เรียกว่า *Template*) หรือใน Java รวมถึงภาษาตระกูล Functional languages อื่นๆ
 
 เอาล่ะ ในที่นี้เราจะนิยาม Generic type ที่ชื่อ `SomethingOrNothing` กัน
 
@@ -66,6 +66,7 @@ impl<T> SomethingOrNothing<T> {
 ให้มองว่า `<T>` ตัวแรกคือการ *ประกาศ* ตัวแปร type ("ฉันกำลังจะทำบางอย่างกับทุกๆ type `T`") ส่วน `<T>` ตัวที่สองคือการ *นำไปใช้* ("สิ่งที่ฉันทำ คือการอิมพลีเมนต์ `SomethingOrNothing<T>`")
 
 > **🔍 `Self` vs `self`:**
+>
 > - `self` (ตัวเล็ก) = ตัวแปรพิเศษ คือ instance ที่เรียก method (เหมือน `this` ในภาษาอื่น)
 > - `Self` (ตัวใหญ่) = ชนิดข้อมูล (type) ของ instance นั้น ใช้ใน `impl` เพื่ออ้างถึง type ที่กำลัง implement
 
@@ -106,9 +107,9 @@ fn call_constructor(x: i32) -> SomethingOrNothing<i32> {
 ดังนั้น เพื่อเป็นก้าวแรกสู่ `vec_min` แบบ Generic เราจะนิยาม Trait `Minimum` ขึ้นมา
 
 > **📝 หมายเหตุเรื่อง `Copy`:**
-> 
-> `Copy` เป็น trait พิเศษที่บอก Rust ว่า type นี้สามารถคัดลอกค่าได้อย่างง่ายดาย (bitwise copy) เช่น `i32`, `f32`, `bool` แต่ไม่ใช่ `String` หรือ `Vec` 
-> 
+>
+> `Copy` เป็น trait พิเศษที่บอก Rust ว่า type นี้สามารถคัดลอกค่าได้อย่างง่ายดาย (bitwise copy) เช่น `i32`, `f32`, `bool` แต่ไม่ใช่ `String` หรือ `Vec`
+>
 > เราต้องการ `Copy` ที่นี่เพราะเราใช้ `self` ใน `min(self, b: Self)` ซึ่งจะย้ายค่า (move) ถ้าไม่มี `Copy` เราจะใช้ `&self` แทน ซึ่งเราจะเรียนในบท Borrowing
 
 ```rust
@@ -248,6 +249,7 @@ fn main() {
     }
 }
 ```
+
 </details>
 
 **แบบฝึกหัด 02.2 (ท้าทาย):** สร้าง trait `Printable` ที่มี method `print` และ implement ให้กับ `SomethingOrNothing<T>` โดยที่ `T` ต้อง implement `Display` (จาก standard library)
@@ -271,4 +273,5 @@ impl<T: Display> Printable for SomethingOrNothing<T> {
     }
 }
 ```
+
 </details>

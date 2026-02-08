@@ -11,10 +11,10 @@
 
 เนื้อหาในโปรเจกต์นี้แปลและเรียบเรียงจาก:
 
-*   **ชื่อหนังสือ:** Rust-101
-*   **ผู้เขียน:** Ralf Jung
-*   **ต้นฉบับ:** [https://www.ralfj.de/projects/rust-101/](https://www.ralfj.de/projects/rust-101/)
-*   **ใบอนุญาตต้นฉบับ:** Creative Commons Attribution–ShareAlike 4.0 International (CC BY-SA 4.0)
+* **ชื่อหนังสือ:** Rust-101
+* **ผู้เขียน:** Ralf Jung
+* **ต้นฉบับ:** [https://www.ralfj.de/projects/rust-101/](https://www.ralfj.de/projects/rust-101/)
+* **ใบอนุญาตต้นฉบับ:** Creative Commons Attribution–ShareAlike 4.0 International (CC BY-SA 4.0)
 
 งานแปลนี้เผยแพร่ภายใต้ใบอนุญาต **[Creative Commons Attribution–ShareAlike 4.0 International (CC BY-SA 4.0)](./LICENSE)** เช่นกันครับ ซึ่งหมายความว่าคุณสามารถนำไปใช้งาน ดัดแปลง และเผยแพร่ต่อได้ โดยต้องให้เครดิตแก่ผู้สร้างต้นฉบับและเผยแพร่งานดัดแปลงภายใต้ใบอนุญาตเดียวกัน
 
@@ -56,11 +56,11 @@ mdbook serve
 
 เรายินดีต้อนรับทุกท่านที่มีความสนใจในการปรับปรุงงานแปลนี้ ไม่ว่าจะเป็นการแก้ไขคำผิด, ปรับปรุงสำนวน, หรือเสนอแนะเนื้อหาเพิ่มเติม
 
-1.  Fork repository นี้
-2.  สร้าง branch ใหม่สำหรับงานของคุณ (`git checkout -b feature/your-feature-name`)
-3.  ทำการเปลี่ยนแปลงและ commit (`git commit -m 'Add some feature'`) 
-4.  Push ไปยัง branch ของคุณ (`git push origin feature/your-feature-name`)
-5.  สร้าง Pull Request
+1. Fork repository นี้
+2. สร้าง branch ใหม่สำหรับงานของคุณ (`git checkout -b feature/your-feature-name`)
+3. ทำการเปลี่ยนแปลงและ commit (`git commit -m 'Add some feature'`)
+4. Push ไปยัง branch ของคุณ (`git push origin feature/your-feature-name`)
+5. สร้าง Pull Request
 
 ## ติดต่อ
 
