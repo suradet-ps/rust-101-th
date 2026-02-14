@@ -4,7 +4,7 @@
 
 # Introduction
 
-- [ส่วนที่ 00: Algebraic datatypes](part00-algebraic-datatypes.md)
+- [บทที่ 00: Algebraic datatypes](part00-algebraic-datatypes.md)
 - [ส่วนที่ 01: นิพจน์ (Expressions), Inherent methods](part01-expressions-inherent-methods.md)
 - [ส่วนที่ 02: Generic types, Traits](part02-generic-types-traits.md)
 - [ส่วนที่ 03: Input](part03-input.md)
