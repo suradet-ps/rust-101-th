@@ -1,6 +1,6 @@
 # Rust-101 (ฉบับภาษาไทย)
 
-[![GitHub license](https://img.shields.io/github/license/pharmacist-sabot/rust-101-th)](https://github.com/pharmacist-sabot/rust-101-th/blob/main/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/suradet-ps/rust-101-th)](https://github.com/suradet-ps/rust-101-th/blob/main/LICENSE)
 [![Built with mdBook](https://img.shields.io/badge/Built%20with-mdBook-blue)](https://rust-lang.github.io/mdBook/)
 
 ## เกี่ยวกับโปรเจกต์
@@ -35,7 +35,7 @@ cargo install mdbook
 หลังจากติดตั้ง `mdBook` แล้ว ให้โคลนโปรเจกต์นี้และใช้คำสั่ง `mdbook build`:
 
 ```bash
-git clone https://github.com/pharmacist-sabot/rust-101-th.git
+git clone https://github.com/suradet-ps/rust-101-th.git
 cd rust-101-th
 mdbook build
 ```
